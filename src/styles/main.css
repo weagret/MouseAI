@@ -1,0 +1,66 @@
+/* variables */
+
+:root {
+    --font-sans-serif: Verdana, Arial, sans-serif;
+
+    --color-black: #000;
+    --color-white: #fff;
+
+    --spacing-px: 1px;
+    --spacing-1: 0.25rem;
+    --spacing-2: 0.5rem;
+    --spacing-4: 1rem;
+    --spacing-8: 2rem;
+    --spacing-16: 4rem;
+    --spacing-32: 8rem;
+    --spacing-64: 16rem;
+    --spacing-128: 32rem;
+
+    --text-4: 0.5rem;
+    --text-8: 0.75rem;
+    --text-16: 1rem;
+    --text-32: 1.25rem;
+    --text-64: 1.5rem;
+    --text-128: 2rem;
+
+    font-family: var(--font-sans-serif);
+}
+
+/* CSS reset */
+
+html,
+body,
+div,
+h2,
+h3,
+h4,
+p,
+a,
+img,
+ul,
+li,
+footer,
+main,
+header,
+nav {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* styling */
+
+body {
+    background-color: var(--color-black);
+    color: var(--color-white);
+
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+}
