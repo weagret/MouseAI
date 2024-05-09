@@ -5,14 +5,18 @@
 
     --color-black: #000;
     --color-white: #fff;
+    --color-grey: #777;
+    --color-dark-grey: #333;
 
     --spacing-px: 1px;
     --spacing-1: 0.25rem;
     --spacing-2: 0.5rem;
+    --spacing-3: 0.75rem;
     --spacing-4: 1rem;
     --spacing-8: 2rem;
     --spacing-16: 4rem;
     --spacing-32: 8rem;
+    --spacing-48: 12rem;
     --spacing-64: 16rem;
     --spacing-128: 32rem;
 
@@ -20,8 +24,10 @@
     --text-8: 0.75rem;
     --text-16: 1rem;
     --text-32: 1.25rem;
+    --text-48: 1.375rem;
     --text-64: 1.5rem;
     --text-128: 2rem;
+    --text-256: 4rem;
 
     font-family: var(--font-sans-serif);
 }
@@ -56,11 +62,70 @@ nav {
 body {
     background-color: var(--color-black);
     color: var(--color-white);
+    font-size: var(--text-32);
 
     display: flex;
     flex-direction: column;
+
+    scrollbar-width: none;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+nav,
+.special-quote {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav {
+    background: transparent;
+    backdrop-filter: blur(var(--spacing-3));
+    -webkit-backdrop-filter: blur(var(--spacing-3));
+
+    border-bottom: var(--spacing-px) var(--color-dark-grey) solid;
+    box-sizing: border-box;
+    padding: var(--spacing-2);
+
+    width: 100%;
+    position: fixed;
+
+    gap: var(--spacing-4);
+}
+
+nav > ul {
+    gap: var(--spacing-8);
+    display: flex;
+}
+nav > ul + ul {
+    color: var(--color-grey);
+}
+ul + ul > li:hover {
+    color: var(--color-white);
+}
 ul {
     list-style: none;
+    flex-wrap: wrap;
+}
+
+.special-quote {
+    margin-top: var(--spacing-16);
+    font-size: var(--text-128);
+    gap: var(--spacing-8);
+}
+
+header img {
+    clip-path: circle();
+    width: var(--spacing-48);
+
+    position: relative;
+    z-index: -1;
+}
+
+main {
+    margin-top: var(--spacing-16);
 }
