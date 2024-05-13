@@ -65,7 +65,7 @@ nav {
 body {
     background-color: var(--color-black);
     color: var(--color-white);
-    font-size: var(--text-32);
+    font-size: var(--text-64);
 
     display: flex;
     flex-direction: column;
@@ -101,10 +101,6 @@ nav {
     gap: var(--spacing-4);
 }
 
-nav > ul {
-    gap: var(--spacing-8);
-    display: flex;
-}
 nav > ul + ul {
     color: var(--color-grey);
 }
@@ -114,6 +110,8 @@ ul + ul > li:hover {
 ul {
     list-style: none;
     flex-wrap: wrap;
+    gap: var(--spacing-8);
+    display: flex;
 }
 .special-quote {
     margin: var(--spacing-16) var(--spacing-4) 0 var(--spacing-4);
@@ -123,7 +121,8 @@ ul {
     justify-content: center;
 }
 
-header img {
+header img,
+.team img {
     clip-path: circle();
     width: var(--spacing-48);
 
@@ -145,6 +144,7 @@ main {
 .overview {
     font-size: var(--text-128);
     gap: var(--spacing-16);
+    margin-bottom: var(--spacing-8);
 }
 .info {
     gap: var(--spacing-4);
@@ -155,8 +155,41 @@ main {
     margin: 0 var(--spacing-6);
 }
 
-.team > h2 {
+.heading {
     font-size: var(--text-160);
     border-bottom: var(--color-dark-grey) solid var(--spacing-px);
     width: 100%;
+}
+
+.member {
+    font-size: var(--text-128);
+
+    margin: var(--spacing-8);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.member-info {
+    margin-left: var(--spacing-8);
+    margin-top: var(--spacing-2);
+}
+
+.download ul,
+footer ul {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.download {
+    margin-top: var(--spacing-8);
+    margin-bottom: var(--spacing-32);
+}
+.download > ul {
+    margin-top: var(--spacing-8);
+}
+footer img {
+    background-color: var(--color-white);
+    width: var(--spacing-8);
 }
