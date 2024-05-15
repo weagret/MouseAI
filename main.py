@@ -32,8 +32,8 @@ class handAndGestureDetector:
 
     def start(self):
         x_len, y_len = pag.size()
-        x_m, y_m = 720, 450
-        pag.moveTo(720, 450)
+        x_m, y_m = x_len // 2, y_len // 2
+        pag.moveTo(x_len // 2, y_len // 2)
         flag = False
 
         cap = cv2.VideoCapture(0)
