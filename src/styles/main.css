@@ -193,3 +193,14 @@ footer img {
     background-color: var(--color-white);
     width: var(--spacing-8);
 }
+a {
+    text-decoration: none;
+    color: var(--color-white);
+}
+.download a {
+    color: var(--color-grey);
+}
+.download a:hover {
+    text-decoration-line: underline;
+    color: var(--color-white);
+}
