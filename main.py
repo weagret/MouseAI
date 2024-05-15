@@ -61,7 +61,7 @@ class handAndGestureDetector:
                 if fingersUp[0] == 1 and totalFingers == 1:
                     pag.rightClick()
                 if totalFingers == 5:
-                    print("________")
+
                     flag = False
                 if totalFingers == 4 and fingersUp[0] == 0 and not flag:
                     flag = True
