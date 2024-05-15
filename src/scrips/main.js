@@ -19,7 +19,7 @@ window.addEventListener("load", (e) => {
             document.documentElement.scrollTop || document.body.scrollTop;
 
         if (
-            currentScrollTopPos >= overviewSection &&
+            currentScrollTopPos >= overviewSection - 500 &&
             currentScrollTopPos < teamSection
         ) {
             changeCss(0);
