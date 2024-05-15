@@ -15,7 +15,7 @@ class handAndGestureDetector:
         self.detectionConfidence = detectionConfidence
         self.trackConfidence = trackConfidence
 
-        self.mpHands = mp.solution
+        self.mpHands = mp.solutions.hands
 
         self.hand = self.mpHands.Hands(
             static_image_mode=self.mode,
@@ -27,11 +27,16 @@ class handAndGestureDetector:
 
     def start(self):
         video = cv2.VideoCapture(0)
+        while True:
+            _, img = video.read()
+            cv2.imshow("MouseAI", img)
+            cv2.waitKey(1)
+
 
 
 def main():
     detector = handAndGestureDetector()
     detector.start()
-
+main()
 if __name__ == "__name__":
     main()
