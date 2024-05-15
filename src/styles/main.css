@@ -62,6 +62,10 @@ nav {
 
 /* styling */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--color-black);
     color: var(--color-white);
@@ -101,10 +105,10 @@ nav {
     gap: var(--spacing-4);
 }
 
-nav > ul + ul {
+nav > ul + ul > li > a {
     color: var(--color-grey);
 }
-ul + ul > li:hover {
+ul + ul > li > a:hover {
     color: var(--color-white);
 }
 ul {
