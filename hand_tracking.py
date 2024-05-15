@@ -37,6 +37,6 @@ class handAndGestureDetector:
 def main():
     detector = handAndGestureDetector()
     detector.start()
-main()
+
 if __name__ == "__name__":
     main()
