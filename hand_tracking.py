@@ -24,7 +24,7 @@ class handAndGestureDetector:
             min_detection_confidence=self.detectionConfidence,
             min_tracking_confidence=self.trackConfidence
         )
-
+# I am animeboy(tima)
     def start(self):
         video = cv2.VideoCapture(0)
 
