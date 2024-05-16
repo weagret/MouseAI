@@ -19,6 +19,9 @@ class cursorAndGestureDetection:
 
         self.x0 = None
         self.y0 = None
+
+        self.xm = None
+        self.ym = None
     
     def processActions(self):
         if not self.cursorActive:
@@ -27,19 +30,26 @@ class cursorAndGestureDetection:
 
         if self.sumOfFingers == self.cursorFingers["leftClick"]:
             pag.click()
+            self.cursorFingersVisible = False
         elif self.sumOfFingers == self.cursorFingers["rightClick"]:
             pag.rightClick()
+            self.cursorFingersVisible = False
         elif self.sumOfFingers == self.cursorFingers["moveCursor"]:
             pointerLandmark = self.lmList[9]
             _, x, y = pointerLandmark
             if not self.cursorFingersVisible:
-                self.x0 = x
-                self.y0 = y
+                self.x0 = self.xm = x
+                self.y0 = self.ym = y
+                
                 self.cursorFingersVisible = True
             else:
-                pag.moveTo(x, y, 0.00001)
+                if (x < self.x0 + 5 and x > self.x0 - 5) or (y < self.y0 + 5 and y > self.y0 - 5):
+                    pag.moveTo(x - self.x0 + self.xm, y - self.y0 + self.ym, 0.0001)
+                    self.xm = x - self.x0 + self.xm
+                    self.ym = y - self.y0 + self.ym
         else:
             pag.press(self.keys[self.sumOfFingers])
+            self.cursorFingersVisible = False
 
 
     def start(self):
