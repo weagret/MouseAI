@@ -1,8 +1,6 @@
 import cv2
 import mediapipe as mp
 
-
-
 class handDetector:
     def __init__(
             self,
@@ -32,15 +30,14 @@ class handDetector:
         imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         imgRGB = cv2.flip(img, 1)
         self.results = self.hands.process(imgRGB)
-        return img
+        return imgRGB
 
-    def findPosition(self, img, handNo=0):
+    def findPosition(self, img, sizes, handNo=0):
         self.lmList = []
         if self.results.multi_hand_landmarks:
             myHand = self.results.multi_hand_landmarks[handNo]
             for id, lm in enumerate(myHand.landmark):
-                h, w, _ = img.shape
-                cx, cy = int(lm.x * w), int(lm.y * h)
+                cx, cy = int(lm.x * sizes[0]), int(lm.y * sizes[1])
                 self.lmList.append([id, cx, cy])
         return self.lmList
 
