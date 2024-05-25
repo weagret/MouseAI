@@ -7,7 +7,7 @@
 -   [MediaPipe](#mediapipe-section)
 -   [Pynput](#pynput-section)
 -   [OpenCV](#opencv-python-section)
--   [PyQt6](#PyQt-section)
+-   [PyQt6](#pyqt-section)
 
 <h3 id="git-section">
     <a aria-hidden="true" href="#git-section">#</a>
