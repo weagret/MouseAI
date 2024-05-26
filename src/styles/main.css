@@ -62,6 +62,8 @@ header img,
 .team img {
     clip-path: circle();
     width: var(--spacing-48);
+
+    z-index: -1;
 }
 
 main {
