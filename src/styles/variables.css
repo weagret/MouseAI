@@ -1,0 +1,36 @@
+:root {
+    --font-sans-serif: Verdana, Arial, sans-serif;
+
+    --color-black: #000;
+    --color-white: #fff;
+    --color-grey: #777;
+    --color-dark-grey: #333;
+    --color-default: #0d1117;
+
+    --spacing-px: 1px;
+    --spacing-1: 0.25rem;
+    --spacing-2: 0.5rem;
+    --spacing-3: 0.75rem;
+    --spacing-4: 1rem;
+    --spacing-6: 1.5rem;
+    --spacing-8: 2rem;
+    --spacing-16: 4rem;
+    --spacing-32: 8rem;
+    --spacing-48: 12rem;
+    --spacing-64: 16rem;
+    --spacing-128: 32rem;
+
+    --text-4: 0.5rem;
+    --text-8: 0.75rem;
+    --text-16: 1rem;
+    --text-32: 1.25rem;
+    --text-48: 1.375rem;
+    --text-64: 1.5rem;
+    --text-96: 1.75rem;
+    --text-128: 2rem;
+    --text-160: 2.5rem;
+    --text-192: 3rem;
+    --text-256: 4rem;
+
+    font-family: var(--font-sans-serif);
+}
